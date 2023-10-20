@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 
 // Crear el servidor de express
 const app = express();
@@ -6,9 +7,9 @@ const app = express();
 // Directorio Público
 app.use( express.static('public') );
 
-// Rutas
 
-// TODO: CRUD: Eventos
+// Rutas
+app.use('/api/auth', require('./routes/auth') );
 
 // Escuchar peticiones
 const port = 4000;
