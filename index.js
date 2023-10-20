@@ -3,13 +3,11 @@ const express = require('express');
 // Crear el servidor de express
 const app = express();
 
+// Directorio Público
+app.use( express.static('public') );
+
 // Rutas
-app.use('/', (req, res) => {
-    console.log('se requiere el /')
-    res.json({
-        ok: true
-    })
-});
+
 // TODO: CRUD: Eventos
 
 // Escuchar peticiones
